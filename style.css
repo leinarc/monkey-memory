@@ -1,0 +1,96 @@
+body {
+	display: flex;
+	flex-direction: row;
+	margin: 0;
+	overflow: hidden;
+	height: 100vh;
+	color: white;
+	background-color: black;
+	font-family: Monospace;
+}
+
+
+
+label {
+	display: block;
+	width: 100%;
+}
+input {
+	width: 6em;
+	color: #000;
+	background-color: #fff;
+	border-width: 1px;
+}
+input:disabled {
+	width: 6em;
+	color: #444;
+	background-color: #aaa;
+}
+
+
+
+#settings-dropdown + label > table > tbody > tr > td {
+	display: none
+}
+#settings-dropdown:checked + label > table > tbody > tr > td {
+	display: table-cell;
+}
+#settings-dropdown + label {
+	width: initial;
+	height: initial;
+	cursor: pointer
+}
+#settings-dropdown:checked + label {
+	width: 100%;
+	height: 100%;
+}
+
+#settings-dropdown:checked + label td td {
+}
+
+
+#scores-dropdown + label > label {
+	display: none !important
+}
+#scores-dropdown:checked + label > label {
+	display: flex !important
+}
+#scores-dropdown + label {
+	width:initial;
+	cursor: pointer;
+}
+#scores-dropdown:checked + label {
+}
+#scores-dropdown + label table {
+	border-collapse: collapse;
+}
+#scores-dropdown + label tr > * {
+	padding-left: 0.3em;
+	padding-right: 0.3em;
+	padding-top: 0.2em;
+	padding-bottom: 0.2em;
+	border-style: solid;
+	border-color: white;
+	border-width: 0;
+	border-right-width: 1px;
+	white-space: nowrap;
+}
+#scores-dropdown + label th > * {
+	display: flex;
+}
+#scores-dropdown + label th > *::after {
+	content: '  ';
+	margin-left: auto;
+	display: block;
+	width: 1em;
+	height: 1em;
+}
+#scores-dropdown + label th > *.sortAsc::after {
+	content: ' \25B2';
+}
+#scores-dropdown + label th > *.sortDesc::after {
+	content: ' \25BC';
+}
+#scores-dropdown + label > * {
+	margin: 0.2em;
+}
