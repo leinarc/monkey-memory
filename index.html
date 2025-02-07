@@ -17,8 +17,8 @@
 				<td id="results-grade"></td>
 			</tr>
 			<tr>
-				<td>Last Number</td>
-				<td id="results-last-number"></td>
+				<td>Correct Clicks</td>
+				<td id="results-last-correct-number"></td>
 			</tr>
 			<tr>
 				<td>Total Time</td>
@@ -45,16 +45,16 @@
 				<tr><td>
 					<label><table style="border-collapse: collapse">
 						<tr>
+							<td><label for="settings-autosize">Autosize</label></td>
+							<td><input type="checkbox" id="settings-autosize" checked></input></td>
+						</tr>
+						<tr>
 							<td><label for="settings-rows">Rows</label></td>
-							<td><input type="number" id="settings-rows" min="1" step="1" value="3"></input></td>
+							<td><input type="number" id="settings-rows" min="1" step="1" value="3" disabled></input></td>
 						</tr>
 						<tr>
 							<td><label for="settings-columns">Columns</label></td>
-							<td><input type="number" id="settings-columns" min="1" step="1" value="5"></input></td>
-						</tr>
-						<tr>
-							<td><label for="settings-gap">Gap</label></td>
-							<td><input type="number" id="settings-gap" min="0" max="1" value="10"></input> %</td>
+							<td><input type="number" id="settings-columns" min="1" step="1" value="5" disabled></input></td>
 						</tr>
 						<tr>
 							<td><label for="settings-cards">Cards</label></td>
@@ -65,7 +65,7 @@
 							<td><input type="checkbox" id="settings-card-increase"></input></td>
 						</tr>
 						<tr>
-							<td><label for="settings-card-increase">Card Increase Value<br/>(n += value / n)</label></td>
+							<td><label for="settings-card-increase-value">Card Increase Value<br/>(n += value / n)</label></td>
 							<td><input type="number" id="settings-card-increase-value" min="0" value="1" disabled></input></td>
 						</tr>
 						<tr>
@@ -79,6 +79,22 @@
 						<tr>
 							<td><label for="settings-autohide-multiplier">Autohide Per-Pass Mutiplier</label></td>
 							<td><input type="number" id="settings-autohide-multiplier" min="1" value="99" disabled></input> %</td>
+						</tr>
+						<tr>
+							<td><label for="settings-reset-autohide">Reset Autohide Delay on Cards Change</label></td>
+							<td><input type="checkbox" id="settings-reset-autohide" disabled></input></td>
+						</tr>
+						<tr>
+							<td><label for="settings-continue-on-mistakes">Continue On Mistakes</label></td>
+							<td><input type="checkbox" id="settings-continue-on-mistakes"></input></td>
+						</tr>
+						<tr>
+							<td><label for="settings-draw-all-cards">Draw All Cards</label></td>
+							<td><input type="checkbox" id="settings-draw-all-cards"></input></td>
+						</tr>
+						<tr>
+							<td><label for="settings-gap">Gap</label></td>
+							<td><input type="number" id="settings-gap" min="0" max="1" value="10"></input> %</td>
 						</tr>
 						<tr>
 							<th colspan="2">
